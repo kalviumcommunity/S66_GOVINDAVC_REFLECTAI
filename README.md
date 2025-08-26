@@ -245,3 +245,45 @@ Return the response strictly in JSON format.
 - By applying dynamic prompting, ReflectAI becomes **adaptive, user-centered, and more engaging**.  
 
 This approach improves the journaling experience by tailoring AI responses to **real-time user needs**.
+
+
+## 🔗 Chain-of-Thought Prompting
+
+In this task, we explored **Chain-of-Thought (CoT) Prompting** for ReflectAI.  
+This technique encourages the model to **reason step by step** before giving the final answer, which improves depth and logical consistency.
+
+### 🔹 What is Chain-of-Thought Prompting?
+Chain-of-Thought prompting is when we explicitly ask the model to **explain its reasoning process** in intermediate steps.  
+Instead of jumping straight to the answer, the model first breaks down its **thought process**, then produces the final structured output.  
+
+This is especially useful for **complex reasoning tasks** like identifying themes, generating meaningful reflection prompts, and aligning affirmations with user context.
+
+---
+
+### 🔹 Chain-of-Thought Prompt Example
+Here is an inspirational quote:
+"Do what you can, with what you have, where you are."
+
+Think step by step:
+
+First, explain the meaning of the quote in your own words.
+
+Identify the core theme.
+
+Derive a personal reflection question from that theme.
+
+Suggest a positive affirmation that matches the theme.
+
+Recommend a small, practical action step.
+
+Finally, return only the structured output in strict JSON format.
+
+
+---
+
+### 🔹 How We Utilized It in ReflectAI
+- We asked the model to **reason step by step** internally before producing the final JSON response.  
+- This improved the **quality of themes, reflection prompts, and affirmations** by making them more thoughtful and aligned.  
+- Although users only see the **final JSON output**, the chain-of-thought ensures **deeper and more accurate results**.  
+
+By applying Chain-of-Thought prompting, ReflectAI generates responses that are **not only structured but also logically grounded and meaningful**.
