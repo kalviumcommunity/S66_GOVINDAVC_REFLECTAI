@@ -62,4 +62,39 @@ As part of this task, we created both **System** and **User** prompts for Reflec
 This ensures ReflectAI consistently produces **high-quality, structured, and safe outputs** for journaling and self-reflection.
 
 
+## 🎯 Zero-Shot Prompting
 
+In this task, we explored **Zero-Shot Prompting** to guide ReflectAI in generating journaling outputs directly from quotes without any prior examples.
+
+### 🔹 What is Zero-Shot Prompting?
+Zero-shot prompting is when we ask a model to perform a task **without providing it with example inputs or outputs**.  
+Instead, the model relies entirely on its **pre-trained knowledge** and the clarity of the instructions we give.
+
+This approach tests the model’s ability to **generalize instructions** and respond accurately to new tasks it hasn’t explicitly seen before.
+
+---
+
+### 🔹 Zero-Shot Prompt Used
+Here is an inspirational quote:
+"Do what you can, with what you have, where you are."
+
+Analyze the quote and provide:
+
+The central theme
+
+A reflective journaling question
+
+A positive affirmation
+
+A small actionable step
+
+Return the response strictly in JSON format.
+
+---
+
+### 🔹 How We Utilized It in ReflectAI
+- We gave the model **only task instructions**, without showing any examples.  
+- The model used its **internal knowledge of language and context** to extract a theme, question, affirmation, and action.  
+- This helps ensure ReflectAI can work with **any inspirational quote**, even if it has not seen similar quotes before.  
+
+By applying zero-shot prompting, ReflectAI stays flexible and adaptive while keeping outputs **structured, useful, and consistent**.
