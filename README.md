@@ -47,3 +47,19 @@ All AI-generated content is returned in a **predefined JSON format**, which incl
   "suggested_action": "Write down one doubt you have and reframe it into a positive belief."
 }
 
+## 🛠️ Prompt Design (RTFC Framework)
+
+As part of this task, we created both **System** and **User** prompts for ReflectAI using the **RTFC framework** (Role, Task, Format, Constraints):
+
+- **System Prompt** → Defined the assistant’s role as a *mindful journaling coach* that extracts the theme, reflection, affirmation, and action step from any inspirational quote.  
+- **User Prompt** → Instructs the assistant to analyze a given quote and return outputs in structured **JSON** format.  
+- **RTFC Applied** →  
+  - **R (Role):** ReflectAI as a journaling assistant  
+  - **T (Task):** Analyze quotes and generate reflection outputs  
+  - **F (Format):** Consistent JSON output  
+  - **C (Constraints):** Keep responses mindful, positive, and concise  
+
+This ensures ReflectAI consistently produces **high-quality, structured, and safe outputs** for journaling and self-reflection.
+
+
+
