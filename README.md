@@ -138,3 +138,57 @@ Return the response in the same JSON format.
 - This improves consistency in output structure and helps ReflectAI stay closer to the desired journaling tone.  
 
 By applying one-shot prompting, ReflectAI combines **clarity of instruction** with **a concrete example**, making its outputs more reliable and predictable.
+
+
+
+
+## 🎯 Multi-Shot Prompting
+
+In this task, we explored **Multi-Shot Prompting** for ReflectAI.  
+This approach provides the model with **multiple examples** before asking it to generate a new output.  
+
+### 🔹 What is Multi-Shot Prompting?
+Multi-shot prompting is when we supply the model with **two or more input–output examples** to guide its behavior.  
+By showing several examples, the model can better learn the **pattern, structure, and tone** expected in the responses, which improves accuracy and reliability.
+
+---
+
+### 🔹 Multi-Shot Prompt Used
+Example 1:
+Quote: "The only limit to our realization of tomorrow is our doubts of today."
+
+Output (JSON):
+{
+"quote": "The only limit to our realization of tomorrow is our doubts of today.",
+"theme": "Self-belief",
+"personal_reflection_prompt": "When did self-doubt hold you back, and how might you overcome it next time?",
+"affirmation": "I believe in my ability to shape a better future.",
+"suggested_action": "Write down one doubt you have and reframe it into a positive belief."
+}
+
+Example 2:
+Quote: "Happiness depends upon ourselves."
+
+Output (JSON):
+{
+"quote": "Happiness depends upon ourselves.",
+"theme": "Self-responsibility",
+"personal_reflection_prompt": "What choices can you make today that bring you closer to genuine happiness?",
+"affirmation": "I have the power to create my own happiness.",
+"suggested_action": "List three small actions you can take today that bring you joy."
+}
+
+Now analyze the following quote:
+
+"Do what you can, with what you have, where you are."
+
+Return the response in the same JSON format.
+
+---
+
+### 🔹 How We Utilized It in ReflectAI
+- We gave the model **multiple examples** (instead of one) so it clearly learns the pattern.  
+- This helps ensure **consistency in JSON formatting** and **better alignment with journaling tone**.  
+- With multi-shot prompting, ReflectAI becomes more reliable for production use, as it generalizes from examples more effectively.  
+
+By applying multi-shot prompting, ReflectAI achieves **greater stability and accuracy**, making it suitable for real-world journaling applications.
