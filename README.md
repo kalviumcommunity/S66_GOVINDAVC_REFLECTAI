@@ -192,3 +192,56 @@ Return the response in the same JSON format.
 - With multi-shot prompting, ReflectAI becomes more reliable for production use, as it generalizes from examples more effectively.  
 
 By applying multi-shot prompting, ReflectAI achieves **greater stability and accuracy**, making it suitable for real-world journaling applications.
+
+
+
+## 🎯 Dynamic Prompting
+
+In this task, we explored **Dynamic Prompting** for ReflectAI.  
+Unlike static prompts (zero/one/multi-shot), dynamic prompting adjusts the instructions **based on user input or context** at runtime.
+
+### 🔹 What is Dynamic Prompting?
+Dynamic prompting means that the prompt is **not fixed** — it changes depending on variables like:  
+- The user’s input (quote, mood, or journaling goal)  
+- The context (time of day, reminder settings, or journaling history)  
+- External data (e.g., retrieving related quotes from a knowledge base using RAG)  
+
+This makes the system **more personalized, adaptive, and context-aware**.
+
+---
+
+### 🔹 Dynamic Prompt Example
+User Input:
+Quote: "Do what you can, with what you have, where you are."
+User Mood: Stressed
+User Goal: Build resilience
+
+Dynamic Prompt:
+You are ReflectAI, a journaling assistant.
+Analyze the given quote and adapt your response to the user's current mood and goal.
+
+Quote: "Do what you can, with what you have, where you are."
+Mood: Stressed
+Goal: Build resilience
+
+Provide:
+
+The central theme
+
+A personalized reflection question (aligned with resilience and stress management)
+
+A supportive affirmation (uplifting and stress-reducing)
+
+A simple action step (practical and calming)
+
+Return the response strictly in JSON format.
+
+
+---
+
+### 🔹 How We Utilized It in ReflectAI
+- Instead of one fixed prompt, ReflectAI **inserts user-specific details** (quote, mood, goal) dynamically.  
+- This allows the journaling assistant to give **personalized reflections** rather than generic ones.  
+- By applying dynamic prompting, ReflectAI becomes **adaptive, user-centered, and more engaging**.  
+
+This approach improves the journaling experience by tailoring AI responses to **real-time user needs**.
