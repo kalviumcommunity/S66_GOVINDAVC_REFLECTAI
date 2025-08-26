@@ -287,3 +287,63 @@ Finally, return only the structured output in strict JSON format.
 - Although users only see the **final JSON output**, the chain-of-thought ensures **deeper and more accurate results**.  
 
 By applying Chain-of-Thought prompting, ReflectAI generates responses that are **not only structured but also logically grounded and meaningful**.
+
+## 🧪 Evaluation Dataset & Testing Framework
+
+In this task, we implemented an **evaluation pipeline** for ReflectAI to measure the quality of AI outputs against expected results.  
+This ensures our prompts consistently generate meaningful, structured, and reliable journaling reflections.
+
+---
+
+### 🔹 Evaluation Dataset
+We created a small dataset of **5 test samples** with inspirational quotes, expected themes, and ideal structured outputs.  
+
+**Example (1 out of 5 samples):**
+```json
+{
+  "quote": "Happiness depends upon ourselves.",
+  "expected_theme": "Self-responsibility",
+  "expected_reflection_prompt": "What choices can you make today that bring you closer to genuine happiness?",
+  "expected_affirmation": "I have the power to create my own happiness.",
+  "expected_action": "List three small actions you can take today that bring you joy."
+}
+
+🔹 Judge Prompt
+
+We used a judge prompt to automatically compare model outputs with the expected results.
+
+Judge Prompt Example:
+
+You are an evaluator. Compare the model’s output with the expected output.
+Evaluate on the following parameters:
+1. Theme relevance (Is the theme aligned with the quote?)
+2. Reflection quality (Is the question deep and reflective?)
+3. Affirmation positivity (Is the affirmation supportive and empowering?)
+4. Action usefulness (Is the suggested step practical and relevant?)
+5. JSON structure correctness
+
+Give a score from 1 to 5 for each parameter and provide short feedback.
+
+
+By considering relevance, quality, positivity, practicality, and format, the evaluation is both quantitative and qualitative.
+🔹 Testing Framework
+
+We set up a script-based testing framework where:
+
+Each quote in the dataset is passed to the model.
+
+The output is compared with the expected result using the judge prompt.
+
+Scores are aggregated across all test cases.
+
+This allows us to batch test multiple prompts and measure consistency.
+
+🔹 Benefits
+
+Identifies weak outputs (e.g., vague themes, unhelpful actions).
+
+Ensures outputs are always well-structured JSON.
+
+Provides a quantitative benchmark for improvement when we refine prompts.
+
+With this pipeline, ReflectAI is not only creative but also evaluated and reliable.
