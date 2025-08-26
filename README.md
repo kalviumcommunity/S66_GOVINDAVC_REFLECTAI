@@ -98,3 +98,43 @@ Return the response strictly in JSON format.
 - This helps ensure ReflectAI can work with **any inspirational quote**, even if it has not seen similar quotes before.  
 
 By applying zero-shot prompting, ReflectAI stays flexible and adaptive while keeping outputs **structured, useful, and consistent**.
+
+
+
+## 🎯 One-Shot Prompting
+
+In this task, we explored **One-Shot Prompting** for ReflectAI. Unlike zero-shot prompting, here we provide the model with **one example** of the task before asking it to generate new outputs.
+
+### 🔹 What is One-Shot Prompting?
+One-shot prompting is when we give the model **a single input–output example** to guide its behavior.  
+This helps the model understand the **desired format, tone, and style** before producing its own response.
+
+---
+
+### 🔹 One-Shot Prompt Used
+Example:
+Quote: "The only limit to our realization of tomorrow is our doubts of today."
+
+Output (JSON):
+{
+"quote": "The only limit to our realization of tomorrow is our doubts of today.",
+"theme": "Self-belief",
+"personal_reflection_prompt": "When did self-doubt hold you back, and how might you overcome it next time?",
+"affirmation": "I believe in my ability to shape a better future.",
+"suggested_action": "Write down one doubt you have and reframe it into a positive belief."
+}
+
+Now analyze the following quote:
+
+"Do what you can, with what you have, where you are."
+
+Return the response in the same JSON format.
+
+---
+
+### 🔹 How We Utilized It in ReflectAI
+- We first gave the model **a single worked-out example** of how to analyze a quote and generate outputs.  
+- Then, we asked it to apply the **same pattern** to a new quote.  
+- This improves consistency in output structure and helps ReflectAI stay closer to the desired journaling tone.  
+
+By applying one-shot prompting, ReflectAI combines **clarity of instruction** with **a concrete example**, making its outputs more reliable and predictable.
